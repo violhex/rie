@@ -1,0 +1,25 @@
+[project]
+name = "rie"
+version = "0.1.0"
+description = "Simple script to extract images from Reddit"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "requests>=2.32.5",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.scripts]
+rie = "rie.main:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["rie"]
+
+[tool.uv]
+package = true
+
+[tool.ruff]
+target-version = "py312"
